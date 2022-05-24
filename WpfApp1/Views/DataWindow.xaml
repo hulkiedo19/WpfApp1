@@ -1,0 +1,119 @@
+﻿<Window x:Class="WpfApp1.Views.DataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        xmlns:vm="clr-namespace:WpfApp1.ViewModels"
+        mc:Ignorable="d"
+        Title="DataWindow" 
+        Height="720" 
+        Width="1200">
+
+    <Window.DataContext>
+        <vm:DataWindowViewModel />
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.7*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid 
+            Grid.Row="1" 
+            Height="500"
+            Foreground="Black" 
+            x:Name="datagrid1" 
+            AutoGenerateColumns="False"
+            ItemsSource="{Binding Employees, UpdateSourceTrigger=PropertyChanged}"
+            SelectedItem="{Binding SelectedEmployee, TargetNullValue={x:Static CollectionView.NewItemPlaceholder}}"
+            Background="Ivory">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="Id"
+                    Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="FirstName"
+                    Binding="{Binding Path=FirstName}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="LastName"
+                    Binding="{Binding Path=LastName}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="MiddleName"
+                    Binding="{Binding Path=MiddleName}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="DateOfBirth"
+                    Binding="{Binding Path=DateOfBirth}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="Phone"
+                    Binding="{Binding Path=Phone}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="Mail"
+                    Binding="{Binding Path=Mail}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="Adress"
+                    Binding="{Binding Path=Adress}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="Image"
+                    Binding="{Binding Path=Image}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="Post"
+                    Binding="{Binding Path=Post}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="WorkExp"
+                    Binding="{Binding Path=WorkExp}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="Passport"
+                    Binding="{Binding Path=Passport}"/>
+                <DataGridTextColumn 
+                    Width="*"
+                    Header="INN"
+                    Binding="{Binding Path=INN}"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+
+        <StackPanel  
+            Orientation="Horizontal">
+            <Button 
+                Width="120" 
+                Content="Добавить запись" 
+                Margin="10" 
+                Height="30" />
+            <Button 
+                Width="120" 
+                Margin="10" 
+                Content="Удалить запись" 
+                Height="30" 
+                Command="{Binding DeleteData, UpdateSourceTrigger=PropertyChanged}"
+                CommandParameter="{Binding ElementName=datagrid1, Path=Items}"/>
+            <Button 
+                Width="120" 
+                Content="Вывести отчет" 
+                Height="30"
+                Margin="10"/>
+            <Button 
+                Width="120"
+                Margin="10"
+                Content="Назад"
+                Height="30"
+                Click="Button_Click"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
