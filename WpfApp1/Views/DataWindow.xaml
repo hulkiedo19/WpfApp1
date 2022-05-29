@@ -54,8 +54,10 @@
                 Height="30"
                 Width="30"
                 Margin="590, 10, 0, 0"
-                VerticalAlignment="Top">
-                <Image Source=".\Refresh_icon.png" />
+                VerticalAlignment="Top"
+                Command="{Binding UpdateData, UpdateSourceTrigger=PropertyChanged}"
+                CommandParameter="{Binding ElementName=datagrid1, Path=Items}">
+                <Image Source="Refresh_icon.png" />
             </Button>
 
         </StackPanel>

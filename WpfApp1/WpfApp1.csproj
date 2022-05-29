@@ -67,6 +67,7 @@
     <Compile Include="Commands\AddDataCommand2.cs" />
     <Compile Include="Commands\Commands.cs" />
     <Compile Include="Commands\DeleteDataCommand.cs" />
+    <Compile Include="Commands\UpdateDataCommand.cs" />
     <Compile Include="Model\BusinessTrip.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
@@ -178,8 +179,6 @@
       <LastGenOutput>DatabaseModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

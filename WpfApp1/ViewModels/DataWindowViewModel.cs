@@ -15,6 +15,7 @@ namespace WpfApp1.ViewModels
         private object selectedEmployee;
 
         public ICommand DeleteData => new DeleteDataCommand(this);
+        public ICommand UpdateData => new UpdateDataCommand(this);
 
         public DataWindowViewModel()
         {
