@@ -42,7 +42,8 @@
                 Width="120" 
                 Content="Вывести отчет" 
                 Margin="10"
-                Height="90"/>
+                Height="90"
+                Command="{Binding Otchet, UpdateSourceTrigger=PropertyChanged}"/>
             <Button 
                 Width="120"
                 Margin="10"

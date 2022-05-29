@@ -16,6 +16,7 @@ namespace WpfApp1.ViewModels
 
         public ICommand DeleteData => new DeleteDataCommand(this);
         public ICommand UpdateData => new UpdateDataCommand(this);
+        public ICommand Otchet => new OtchetCommand(this);
 
         public DataWindowViewModel()
         {
