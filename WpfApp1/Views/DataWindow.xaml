@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:WpfApp1.Views"
         xmlns:vm="clr-namespace:WpfApp1.ViewModels"
         mc:Ignorable="d"
-        Title="DataWindow" 
+        Title="DataWindow"
+        ResizeMode="NoResize"
         Height="720" 
         Width="1200">
 
@@ -16,13 +17,51 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.3*"/>
-            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
 
+        <StackPanel  
+            Orientation="Horizontal"
+            Grid.Row="0">
+
+            <Button 
+                Width="120" 
+                Content="Добавить запись" 
+                Margin="10" 
+                Height="90" 
+                Click="Button_Click_1"/>
+            <Button 
+                Width="120" 
+                Margin="10" 
+                Content="Удалить запись" 
+                Height="90" 
+                Command="{Binding DeleteData, UpdateSourceTrigger=PropertyChanged}"
+                CommandParameter="{Binding ElementName=datagrid1, Path=Items}"/>
+            <Button 
+                Width="120" 
+                Content="Вывести отчет" 
+                Margin="10"
+                Height="90"/>
+            <Button 
+                Width="120"
+                Margin="10"
+                Content="Назад"
+                Height="90"
+                Click="Button_Click"/>
+
+            <Button 
+                Height="30"
+                Width="30"
+                Margin="590, 10, 0, 0"
+                VerticalAlignment="Top">
+                <Image Source=".\Refresh_icon.png" />
+            </Button>
+
+        </StackPanel>
+        
         <DataGrid 
             Grid.Row="1" 
-            Height="500"
             Foreground="Black" 
             x:Name="datagrid1" 
             AutoGenerateColumns="False"
@@ -65,14 +104,6 @@
                     Binding="{Binding Path=Adress}"/>
                 <DataGridTextColumn 
                     Width="*"
-                    Header="Image"
-                    Binding="{Binding Path=Image}"/>
-                <DataGridTextColumn 
-                    Width="*"
-                    Header="Post"
-                    Binding="{Binding Path=Post}"/>
-                <DataGridTextColumn 
-                    Width="*"
                     Header="WorkExp"
                     Binding="{Binding Path=WorkExp}"/>
                 <DataGridTextColumn 
@@ -84,36 +115,8 @@
                     Header="INN"
                     Binding="{Binding Path=INN}"/>
             </DataGrid.Columns>
-            
+
         </DataGrid>
-
-        <StackPanel  
-            Orientation="Horizontal">
-            <Button 
-                Width="120" 
-                Content="Добавить запись" 
-                Margin="10" 
-                Height="30" />
-            <Button 
-                Width="120" 
-                Margin="10" 
-                Content="Удалить запись" 
-                Height="30" 
-                Command="{Binding DeleteData, UpdateSourceTrigger=PropertyChanged}"
-                CommandParameter="{Binding ElementName=datagrid1, Path=Items}"/>
-            <Button 
-                Width="120" 
-                Content="Вывести отчет" 
-                Height="30"
-                Margin="10"/>
-            <Button 
-                Width="120"
-                Margin="10"
-                Content="Назад"
-                Height="30"
-                Click="Button_Click"/>
-        </StackPanel>
-
 
     </Grid>
 </Window>

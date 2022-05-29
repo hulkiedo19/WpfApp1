@@ -1,0 +1,78 @@
+﻿<Window x:Class="WpfApp1.Views.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        xmlns:vm="clr-namespace:WpfApp1.ViewModels"
+        mc:Ignorable="d"
+        Title="AddWindow" 
+        Height="450" 
+        Width="400">
+
+    <Window.DataContext>
+        <vm:AddWindowViewModel />
+    </Window.DataContext>
+    
+    <StackPanel
+        Margin="10"
+        VerticalAlignment="Center">
+
+        <TextBlock 
+            Text="FirstName"/>
+        <TextBox 
+            Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"/>
+        
+        <TextBlock 
+            Text="LastName"/>
+        <TextBox 
+            Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock 
+            Text="MiddleName"/>
+        <TextBox 
+            Text="{Binding MiddleName, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock 
+            Text="DataOfBirth"/>
+        <DatePicker
+            SelectedDate="{Binding DateOfBirth, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock 
+            Text="Phone"/>
+        <TextBox 
+            Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock 
+            Text="Mail"/>
+        <TextBox 
+            Text="{Binding Mail, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock 
+            Text="Adress"/>
+        <TextBox 
+            Text="{Binding Adress, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock 
+            Text="WorkExp"/>
+        <TextBox 
+            Text="{Binding WorkExp, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock 
+            Text="Passport"/>
+        <TextBox 
+            Text="{Binding Passport, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock 
+            Text="INN"/>
+        <TextBox 
+            Text="{Binding INN, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Button 
+            Content="Add"
+            Margin="0, 15, 0, 0"
+            Command="{Binding AddDataCommand, UpdateSourceTrigger=PropertyChanged}"/>
+
+    </StackPanel>
+    
+</Window>

@@ -15,26 +15,13 @@ using System.Windows.Shapes;
 namespace WpfApp1.Views
 {
     /// <summary>
-    /// Interaction logic for DataWindow.xaml
+    /// Interaction logic for AddWindow.xaml
     /// </summary>
-    public partial class DataWindow : Window
+    public partial class AddWindow : Window
     {
-        public DataWindow()
+        public AddWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Window window = new LoginWindow();
-            window.Show();
-            this.Close();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Window window = new AddWindow();
-            window.Show();
         }
     }
 }

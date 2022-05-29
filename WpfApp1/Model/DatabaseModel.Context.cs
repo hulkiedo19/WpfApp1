@@ -25,9 +25,8 @@ namespace WpfApp1.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<BuisnessTrip> BuisnessTrips { get; set; }
+        public virtual DbSet<BusinessTrip> BusinessTrips { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<EmploymentContract> EmploymentContracts { get; set; }
-        public virtual DbSet<Post> Posts { get; set; }
     }
 }

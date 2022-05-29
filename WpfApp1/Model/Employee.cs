@@ -17,7 +17,7 @@ namespace WpfApp1.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employee()
         {
-            this.BuisnessTrips = new HashSet<BuisnessTrip>();
+            this.BusinessTrips = new HashSet<BusinessTrip>();
             this.EmploymentContracts = new HashSet<EmploymentContract>();
         }
     
@@ -26,18 +26,15 @@ namespace WpfApp1.Model
         public string LastName { get; set; }
         public string MiddleName { get; set; }
         public System.DateTime DateOfBirth { get; set; }
-        public Nullable<int> Phone { get; set; }
+        public string Phone { get; set; }
         public string Mail { get; set; }
         public string Adress { get; set; }
-        public byte[] Image { get; set; }
-        public string Post { get; set; }
         public int WorkExp { get; set; }
-        public int Passport { get; set; }
-        public int INN { get; set; }
+        public string Passport { get; set; }
+        public string INN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BuisnessTrip> BuisnessTrips { get; set; }
-        public virtual Post Post1 { get; set; }
+        public virtual ICollection<BusinessTrip> BusinessTrips { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EmploymentContract> EmploymentContracts { get; set; }
     }

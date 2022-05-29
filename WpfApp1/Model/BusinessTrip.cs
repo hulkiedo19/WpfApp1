@@ -12,14 +12,15 @@ namespace WpfApp1.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class BuisnessTrip
+    public partial class BusinessTrip
     {
         public int TripId { get; set; }
         public Nullable<int> EmployeeId { get; set; }
         public int Budget { get; set; }
         public string Destination { get; set; }
         public string Purpose { get; set; }
-        public System.DateTime Period { get; set; }
+        public System.DateTime PeriodStart { get; set; }
+        public System.DateTime PeriodEnd { get; set; }
     
         public virtual Employee Employee { get; set; }
     }

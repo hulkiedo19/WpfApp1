@@ -4,14 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a9e66a74ef9b43e987b83c4b11193749" Name="Diagram1">
-        <EntityTypeShape EntityType="DatabaseModel.BuisnessTrip" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Employee" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.EmploymentContract" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Post" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
-        <AssociationConnector Association="DatabaseModel.FK__BuisnessT__Emplo__29572725" ManuallyRouted="false" />
-        <AssociationConnector Association="DatabaseModel.FK__Employee__Post__267ABA7A" ManuallyRouted="false" />
-        <AssociationConnector Association="DatabaseModel.FK__Employmen__Emplo__2C3393D0" ManuallyRouted="false" />
+      <Diagram DiagramId="db4c1cc957f34eb4a3121fdf06a1ddaf" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.BusinessTrip" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Employee" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.EmploymentContract" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseModel.FK__BusinessT__Emplo__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK__Employmen__Emplo__29572725" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
